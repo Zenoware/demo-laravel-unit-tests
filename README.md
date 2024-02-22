@@ -1,32 +1,32 @@
-# Sailstream
+# [Demo] Laravel Unit Tests
 
 ## Overview
 
-Clone this starter project if you're in a hurry to spin up a Laravel project with Sail + Jetstream for the UI scaffold.
+The goal of this repo is to demo how to write unit tests for a Laravel application, or honestly, any PHP application.
+In reality, unit tests don't really require Laravel, as they are at the lowest level of testing.
 
-I created this repo because it's onerous to keep on scaffolding the same things over and over when I'm trying to do a demo or starter project.
+Unit tests are lightweight tests that are written to test a single unit of code. Writing more unit tests can help you write better code by thinking atomically about your code.
 
-## Requirements
+In one of my previous roles, the developers were _also_ the testers. Because we ran our code through a battery of data providers, we were able to catch a lot of bugs before they made it to production.
 
-A working understanding of how Laravel, Sail, and Jetstream work together.
+That makes them very flexible and very fast. This means you can write as many as you want and run them as often as you want with negligible performance impact.
 
-It has _all_ Sail services enabled by default (except for MariaDB and Postgres). PHPMyAdmin was added on for easy DB viewing. 
-Take care of possible port collisions yourself.
+They can be written for any PHP application. However, Laravel's testing suite is quite robust and makes it easy to write tests for your application.
 
-## Nuances
+## Benefits of unit tests
 
-- Default MySQL DB host port has been changed to `3307`. Change `FORWARD_DB_PORT` if needed.
-- AWS-prefix env var defaults have been changed to Minio.
+- Fewer feature tests needed as you can trust your code more at the most intrinsic level
+- The more unit tests you write, the bigger the blueprints you have for new tests
+- The more unit tests you write, the more interested you become with edge cases and how your code behaves in different scenarios
+- Application code is more understandable because you wind writing more portable code
+- Mocks and stubs can be used to isolate the code being tested
+- More cognisant of dependencies and how they are used due to mocking and stubbing
 
-## Installation
+## Getting started
 
-### Clone
+### Clone this repo
 
-    git clone git@github.com:Zenoware/sailstream.git
-
-or
-
-    composer create-project zenoware/sailstream --prefer-dist
+    git clone git@github.com:Zenoware/demo-laravel-unit-tests.git
 
 ### Set environment variables
 
@@ -36,31 +36,15 @@ or
 
     composer install
 
-### Run
+### Boot the Laravel application
 
     ./vendor/bin/sail up
 
-### Migrate
+### Run the tests
 
-    ./vendor/bin/sail artisan migrate
+    ./vendor/bin/sail artisan test
 
-### Build front-end
+## Resources
 
-    ./vendor/bin/sail npm install
-    ./vendor/bin/sail npm run dev
-
-### Symlink storage
-
-    ./vendor/bin/sail artisan storage:link
-
-### (Optional) SSH into the app container
-
-    ./vendor/bin/sail shell
-
-## Quick links
-
-- [Laravel](http://localhost)
-- [Telescope](http://localhost/telescope)
-- [PHPMyAdmin](http://localhost:8080)
-- [Minio](http://localhost:9000) (don't forget to add a `local` bucket with R/W permissions)
-- [Mailpit](http://localhost:1025)
+- [Mockery](https://docs.mockery.io/en/latest/)
+- [PHPUnit](https://phpunit.readthedocs.io/en/9.5/)
