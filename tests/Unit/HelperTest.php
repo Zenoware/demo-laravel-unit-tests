@@ -65,7 +65,7 @@ class HelperTest extends TestCase
         $this->assertEquals($expected, decimalDivide($number1, $number2, $precision));
     }
 
-    public function decimalDivideDataProvider(): array
+    public static function decimalDivideDataProvider(): array
     {
         return [
             ['1.2345', '2.3456', 2, '0.52'],
@@ -88,7 +88,7 @@ class HelperTest extends TestCase
         decimalDivide($number1, $number2, $precision);
     }
 
-    public function invalidDecimalDivideDataProvider(): array
+    public static function invalidDecimalDivideDataProvider(): array
     {
         return [
             ['1.2345', '0', 2],
