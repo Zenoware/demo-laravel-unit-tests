@@ -21,6 +21,7 @@ They can be written for any PHP application. However, Laravel's testing suite is
 - Application code is more understandable because you wind writing more portable code
 - Mocks and stubs can be used to isolate the code being tested
 - More cognisant of dependencies and how they are used due to mocking and stubbing
+- When doing a massive refactor, you can run your unit tests to see if you've broken anything
 
 ## Getting started
 
