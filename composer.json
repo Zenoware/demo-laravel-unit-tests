@@ -4,6 +4,12 @@
     "description": "Laravel unit tests demo for training purposes.",
     "keywords": ["phpunit","laravel"],
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/spatialmedia/slack-client"
+        }
+    ],
     "require": {
         "php": "^8.3",
         "ext-bcmath": "*",
@@ -15,6 +21,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/telescope": "^4.17",
         "laravel/tinker": "^2.8",
+        "spatialmedia/slack-client": "^1.2",
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {
