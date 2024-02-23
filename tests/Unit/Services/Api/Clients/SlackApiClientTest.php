@@ -43,9 +43,9 @@ class SlackApiClientTest extends TestCase
 
         $slackClient = Mockery::mock(SlackClient::class);
 
-        $slackClient->shouldReceive('setToken')->once()->with(Mockery::mock('string'));
+        $slackClient->shouldReceive('setToken')->once()->with('token');
         $slackClient->shouldReceive('getMessageBuilder')->once()->andReturn($slackMessageBuilder);
-        $slackClient->shouldReceive('postMessage')->once()->with($slackMessageBuilder);
+        $slackClient->shouldReceive('postMessage')->once()->with($slackMessage);
 
         $slackApiClient = new SlackApiClient('token', $slackClient);
 
