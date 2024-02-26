@@ -30,6 +30,21 @@ They can be written for any PHP application. However, Laravel's testing suite is
 - More cognisant of dependencies and how they are used due to mocking and stubbing
 - When doing a massive refactor, you can run your unit tests to see if you've broken anything
 
+## When to **NOT** use unit tests
+
+While unit tests are a powerful tool for validating the functionality of individual components of your code, they are not always the best choice for _every_ testing scenario. Here are some situations where you might want to use _feature_ or _integration_ tests instead:
+
+### Complex interactions
+Unit tests are designed to test a single unit of code in isolation. However, in a real-world application, different units of code often interact with each other in complex ways. If you want to test these interactions, you should use integration tests. Integration tests allow you to test the interaction between different units of code or different systems to ensure they work together as expected.
+
+### End-to-end functionality
+
+While unit tests are great for testing individual functions or methods, they are not designed to test a complete feature of the system. If you want to test a feature from end to end, you should use feature tests. Feature tests allow you to test a complete feature of the system, which may involve multiple units of code interacting together.
+
+### Real-world scenarios
+
+When doing a massive refactor, unit tests might not be sufficient to ensure that the overall functionality of the system remains intact. In such cases, feature or integration tests that cover larger parts of the system can be more effective in catching any potential issues.
+
 ## Getting started
 
 ### Clone this repo
