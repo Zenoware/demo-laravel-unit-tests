@@ -17,7 +17,8 @@ They can be written for any PHP application. However, Laravel's testing suite is
 
 - Fewer feature tests needed as you can trust your code more at the most intrinsic level
 - The more unit tests you write, the bigger the blueprints you have for new tests
-- The more unit tests you write, the more interested you become with edge cases and how your code behaves in different scenarios
+- The more data providers you write, the more interested you become with edge cases and how your code behaves in different scenarios
+- You can anticipate exceptions and errors before they happen
 - Application code is more understandable because you wind writing more portable code
 - Mocks and stubs can be used to isolate the code being tested
 - More cognisant of dependencies and how they are used due to mocking and stubbing
