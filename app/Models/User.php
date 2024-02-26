@@ -58,4 +58,13 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+     * In an ideal world, these methods belong in a repository class
+     * ... but for the purposes of this example, we'll keep them here.
+     */
+    public function getNameAndEmail(): string
+    {
+        return $this->name . ' - ' . $this->email;
+    }
 }
