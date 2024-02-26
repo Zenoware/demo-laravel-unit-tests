@@ -15,6 +15,12 @@ They can be written for any PHP application. However, Laravel's testing suite is
 
 ## Benefits of unit tests
 
+| Type of Test | Speed | Purpose |
+|--------------|-------|---------|
+| Unit         | Fast  | To test a single unit of code (e.g., a function or method) in isolation from other parts of the system. |
+| Feature      | Medium | To test a complete feature of the system, which may involve multiple units of code interacting together. |
+| Integration  | Slow  | To test the interaction between different units of code or different systems to ensure they work together as expected. |
+
 - Fewer feature tests needed as you can trust your code more at the most intrinsic level
 - The more unit tests you write, the bigger the blueprints you have for new tests
 - The more data providers you write, the more interested you become with edge cases and how your code behaves in different scenarios
