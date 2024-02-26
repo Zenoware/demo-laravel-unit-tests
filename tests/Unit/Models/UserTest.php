@@ -15,6 +15,8 @@ class UserTest extends TestCase
      * We just want to see if the magic methods (ugh) of `setUserAttribute` and `getUserAttribute` works as expected
      * For that reason, we can extend the regular PHPUnit TestCase class
      *
+     * The moment this attempts to interact with the database, it will become a feature test
+     *
      * @covers ::getNameAndEmail
      */
     public function testGetNameAndEmail(): void
