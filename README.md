@@ -45,6 +45,9 @@ They can be written for any PHP application. However, Laravel's testing suite is
 
     ./vendor/bin/sail artisan test
 
+    # (Optional) Run the tests in a specific group. Useful for exclusively running new tests on your branch.
+    ./vendor/bin/sail artisan test --group=new
+
 ## Resources
 
 - [Mockery](https://docs.mockery.io/en/latest/)
